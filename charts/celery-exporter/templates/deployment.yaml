@@ -6,7 +6,7 @@ metadata:
     {{- include "celery-exporter.labels" . | nindent 4 }}
 spec:
   replicas: 1
-    selector:
+  selector:
     matchLabels:
       {{- include "celery-exporter.selectorLabels" . | nindent 6 }}
   template:
