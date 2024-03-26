@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.3](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.2...v2.2.3) (2024-03-26)
+
+
+### Features
+
+* make deployment envs customizable ([4c32ff0](https://github.com/chrisvfabio/celery-exporter/commit/4c32ff0880aaadc6af2d33c9c89f0bf95f87c844))
+
+
+### Miscellaneous Chores
+
+* release 2.2.3 ([6f35628](https://github.com/chrisvfabio/celery-exporter/commit/6f3562828aa239acf3a7ad4d9dccae1685496402))
+
 ## [2.2.2](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.1...v2.2.2) (2024-03-26)
 
 
