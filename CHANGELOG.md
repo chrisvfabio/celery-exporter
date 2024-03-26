@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.0-alpha.9...v2.2.0) (2024-03-26)
+
+
+### Miscellaneous Chores
+
+* release 2.2.0 ([6b9a0e2](https://github.com/chrisvfabio/celery-exporter/commit/6b9a0e24697c3b4dc393de96cad30d95750b9eea))
+
 ## [2.2.0-alpha.9](https://github.com/chrisvfabio/celery-exporter/compare/v1.1.0...v2.2.0-alpha.9) (2024-03-26)
 
 
