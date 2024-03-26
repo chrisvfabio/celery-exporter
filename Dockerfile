@@ -71,6 +71,6 @@ LABEL org.label-schema.schema-version="1.0" \
   org.label-schema.version=$VERSION \
   org.label-schema.description="Prometheus metrics exporter for Celery" \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/grafana/celery-exporter"
+  org.label-schema.vcs-url="https://github.com/chrisvfabio/celery-exporter"
 
 EXPOSE 9540

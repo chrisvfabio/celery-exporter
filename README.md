@@ -1,25 +1,24 @@
-# Celery Exporter
+<div align="center"><img src="https://github.com/chrisvfabio/celery-exporter/assets/5626828/7a75c2f1-8f17-44f9-9e5c-8e1b5095077b" width=96 height=96  />
+</div>
+<h1 align="center">Celery Exporter</h1>
+<p align="center">Celery Exporter is a Prometheus metrics exporter for Celery 5, written in python.</p>
+<hr />
+<br />
 
-[![Travis CI](https://img.shields.io/travis/OvalMoney/celery-exporter.svg?style=flat)](https://travis-ci.org/OvalMoney/celery-exporter)
-[![Docker Hub](https://img.shields.io/docker/cloud/automated/ovalmoney/celery-exporter.svg?style=flat)](https://hub.docker.com/r/ovalmoney/celery-exporter/)
+| Metric Name | Description |
+| --- | --- |
+| `celery_tasks_total` | The number of tasks currently known to the queue |
+| `celery_tasks_runtime_seconds` | The number of seconds tasks take until completed as histogram |
+| `celery_tasks_latency_seconds` | The time until tasks are picked up by a worker |
+| `celery_workers` | The number of currently probably alive workers |
+| `celery_oldest_unacked_message_age` | The age of the oldest unacked message in the queue |
 
-Celery Exporter is a Prometheus metrics exporter for Celery 4, written in python.
+<hr />
 
-Here the list of exposed metrics:
-
-* `celery_tasks_total` exposes the number of tasks currently known to the queue
-  labeled by `name`, `state`, `queue` and `namespace`.
-* `celery_tasks_runtime_seconds` tracks the number of seconds tasks take
-  until completed as histogram labeled by `name`, `queue` and `namespace`
-* `celery_tasks_latency_seconds` exposes a histogram of task latency, i.e. the time until
-  tasks are picked up by a worker
-* `celery_workers` exposes the number of currently probably alive workers
-
----
 ## Requirements
 
-
 ### Dependencies
+
 The project comes with `redis` lib already installed, you have to install any other dependency in case you are using other brokers.
 
 ### Celery app
@@ -43,10 +42,10 @@ $ celery-exporter
 ### Docker
 ```bash
 # Download image
-$ docker pull ovalmoney/celery-exporter
+$ docker pull ghcr.io/chrisvfabio/celery-exporter
 
 # Run it
-$ docker run -it --rm ovalmoney/celery-exporter
+$ docker run -it --rm ghcr.io/chrisvfabio/celery-exporter
 ```
 
 ### Command Options
@@ -159,5 +158,10 @@ celery_tasks_latency_seconds_sum{namespace="celery",name="my_app.tasks.fetch_som
 celery_task_latency_seconds_created{namespace="celery",name="my_app.tasks.fetch_some_data",queue="celery"} 1.5489449475378375e+09
 ```
 
-### Inspired by @zerok work
-https://github.com/zerok/celery-prometheus-exporter
+### Credits
+
+This repo is a fork/clone of the original project [grafana/celery-exporter](https://github.com/OvalMoney/celery-exporter) which takes inspiration from the following projects:
+
+- https://github.com/zerok/celery-prometheus-exporter
+- https://github.com/grafana/celery-exporter
+- https://github.com/OvalMoney/celery-exporter
