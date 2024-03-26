@@ -69,7 +69,7 @@ jobs:
       - name: Run chart-releaser job
         uses: helm/chart-releaser-action@v1.6.0
         env:
-          CR_TOKEN: "${{ secrets.GHA_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           charts_dir: charts
           version: ${{ github.event.inputs.release_version }}
