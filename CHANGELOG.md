@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.2.1](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.1...v2.2.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* indentation in deployment template ([b0929ce](https://github.com/chrisvfabio/celery-exporter/commit/b0929ce9b3b435e73cf5351661d12e24af24c3cb))
+
+
+### Miscellaneous Chores
+
+* release 2.2.0 ([6b9a0e2](https://github.com/chrisvfabio/celery-exporter/commit/6b9a0e24697c3b4dc393de96cad30d95750b9eea))
+* release 2.2.0-alpha.5 ([492a467](https://github.com/chrisvfabio/celery-exporter/commit/492a467dcd499b6e616737e819bef594a932d0dc))
+* release 2.2.0-alpha.5 ([a7826be](https://github.com/chrisvfabio/celery-exporter/commit/a7826be94ee47dd64df070bab6428a563942d911))
+* release 2.2.0-alpha.6 ([c02ac7a](https://github.com/chrisvfabio/celery-exporter/commit/c02ac7a5107b2691ea03cfd5c4e816db8ee01242))
+* release 2.2.0-alpha.7 ([de2742e](https://github.com/chrisvfabio/celery-exporter/commit/de2742ef401c36e663e44a3a684299f2ea859e9c))
+* release 2.2.0-alpha.8 ([656f3fd](https://github.com/chrisvfabio/celery-exporter/commit/656f3fdd292d141348709e415f3637d03a598618))
+* release 2.2.0-alpha.9 ([0c5e0ec](https://github.com/chrisvfabio/celery-exporter/commit/0c5e0eccc8ac35e728c86b724e478fe61f0f42e2))
+* release 2.2.1 ([e131cae](https://github.com/chrisvfabio/celery-exporter/commit/e131cae25f25fb118f07c89c5a88b258aea3d8f0))
+
 ## [2.2.1](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.0-alpha.9...v2.2.1) (2024-03-26)
 
 
