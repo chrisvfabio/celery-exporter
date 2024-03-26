@@ -1,0 +1,10 @@
+🚀 Prometheus Scrape Config
+
+Add the following section into your prometheus scrape config:
+
+- job_name: {{ .Chart.Name | replace "-" "_" }}
+  scrape_interval: 15s
+  static_configs:
+    - targets: ["{{ include "celery-exporter.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.service.port }}"]
+
+🪄 Happy Scrapping!
