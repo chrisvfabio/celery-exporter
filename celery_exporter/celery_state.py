@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Dict, Optional, Tuple
-
 from cachetools import LRUCache
 from celery import states
+import time
 
 CELERY_MISSING_DATA = "undefined"
 # name, state, runtime, queue
@@ -168,3 +168,13 @@ class CeleryState:
                 return (name, queue, latency)
 
         return (None, None, None)
+
+    def get_oldest_unacknowledged_task_age(self) -> Optional[float]:
+        oldest_task_age = None
+        current_time = time.time()
+        for task in self.tasks.values():
+            if task.state in [TaskState.PENDING, TaskState.RECEIVED]:
+                if oldest_task_age is None or task.local_received < oldest_task_age:
+                    oldest_task_age = current_time - task.local_received
+        return oldest_task_age
+    
