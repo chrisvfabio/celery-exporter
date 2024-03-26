@@ -13,7 +13,7 @@ from prometheus_client.core import GaugeMetricFamily
 from prometheus_client.registry import Collector
 
 from .celery_state import CeleryState, Event
-from .metrics import LATENCY, TASKS, TASKS_RUNTIME, WORKERS
+from .metrics import LATENCY, TASKS, TASKS_RUNTIME, WORKERS, OLDEST_UNACKED_MESSAGE_AGE
 from .utils import get_config
 
 
@@ -50,6 +50,10 @@ class TaskThread(threading.Thread):
                 )
 
             TASKS.labels(namespace=self._namespace, name=name, state=state, queue=queue).inc()
+        
+            # Get the oldest unacked message age
+            oldest_unacked_message_age = self._state.get_oldest_unacknowledged_task_age()
+            OLDEST_UNACKED_MESSAGE_AGE.labels(namespace=self._namespace, name=name, state=state, queue=queue).set(oldest_unacked_message_age)
 
     def _monitor(self):  # pragma: no cover
         while True:

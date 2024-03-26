@@ -53,3 +53,10 @@ WORKERS = prometheus_client.Gauge(
     "Number of alive workers.",
     ["namespace"],
 )
+
+OLDEST_UNACKED_MESSAGE_AGE = prometheus_client.Gauge(
+    "celery_oldest_unacked_message_age",
+    "Age of the oldest unacked message in seconds.",
+    ["namespace", "name", "state", "queue", "age"],
+    unit="seconds",
+)
