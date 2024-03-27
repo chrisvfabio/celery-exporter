@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.4](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.3...v2.2.4) (2024-03-27)
+
+
+### Bug Fixes
+
+* remove redundant label in oldested unack message metric ([d736018](https://github.com/chrisvfabio/celery-exporter/commit/d736018fe1da8b1261762a8094e2ca35a680650e))
+
+
+### Miscellaneous Chores
+
+* release 2.2.4 ([45650a7](https://github.com/chrisvfabio/celery-exporter/commit/45650a7c93817055a2b400480441d3a87647d3db))
+
 ## [2.2.3](https://github.com/chrisvfabio/celery-exporter/compare/v2.2.2...v2.2.3) (2024-03-26)
 
 
