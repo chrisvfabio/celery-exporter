@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   celery-exporter:
   - apiVersion: v2
+    appVersion: 2.2.4
+    created: "2024-03-27T05:42:43.972420833Z"
+    description: A Helm chart for Kubernetes
+    digest: 080f9216e747c5d01f36c95abeaaba26a3f069738d68dfa627a78fb566895b45
+    name: celery-exporter
+    type: application
+    urls:
+    - https://github.com/chrisvfabio/celery-exporter/releases/download/celery-exporter-2.2.4/celery-exporter-2.2.4.tgz
+    version: 2.2.4
+  - apiVersion: v2
     appVersion: 2.2.3
     created: "2024-03-26T15:37:09.594785119Z"
     description: A Helm chart for Kubernetes
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/chrisvfabio/celery-exporter/releases/download/celery-exporter-0.1.0/celery-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-26T15:37:09.594797843Z"
+generated: "2024-03-27T05:42:43.972441362Z"
